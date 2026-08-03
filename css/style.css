@@ -1,0 +1,383 @@
+
+
+
+    /*!-----RESET-----*/
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    
+    
+    
+    /*!-----FORMATO CONTENEDOR-----*/
+
+.grid-contenedor {
+    display: grid;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+    min-height: auto;
+        }
+    
+header {
+    background-color: rgb(76, 99, 154);
+    grid-area: header;
+    }
+    
+main {
+    background-color: rgb(0, 0, 0);
+    grid-area: main;
+    }
+    
+footer {
+    background-color: rgb(30, 28, 28); 
+    grid-area: footer;
+    }
+
+
+
+
+    /*!-----MEDIA QUERY----*/ 
+    
+    @media screen and (max-width:900px) { /*!-----INDEX----*/ 
+        .grid-contenedor {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas:
+                "header"
+                "main"
+                "footer";
+        }
+        main{
+            min-height: auto;
+        }
+        }
+        
+    @media screen and (max-width:900px) { /*!-----INDEX----*/ 
+        .info {
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+        }
+        
+    @media screen and (max-width:900px) { /*!-----GALERIA----*/ 
+        .datos {
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+        }
+
+    @media screen and (max-width:900px) { /*!-----FOTOGRAFOS-LOCUTORES----*/ 
+        .fotografos-locutores {
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            }
+        }
+        @media screen and (max-width:900px) { /*!-----PROVINCIAS----*/ 
+            .grid-galeria {
+                grid-column: repeat(3, 1fr);
+                grid-auto-flow: 200px;
+                }
+            .grid-items{
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+            }
+
+
+    /*!-----HEADER-----*/
+    
+    .grid-contenedor a { /*!-----TEXTO-----*/
+        color: #03b2cb;
+        font-style: italic;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 5px;
+    }
+    
+    header img { /*!-----LOGO-----*/
+        width: 60px;
+        height: 60px;
+        margin: 0px 0px 0px 40px;
+    }
+
+
+
+
+    /*!-----MAIN-----*/
+
+    .carousel-inner { /*!-----CARRUSEL-----*/
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        }
+    
+    .video { /*!-----FLEX VIDEO-----*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }      
+    
+    main section img { /*!-----IMAGENES-----*/
+        width: 250px;
+        height: 250px;
+    }
+    
+    main h2 { /*!-----TEXTO PRINCIPAL-----*/
+        color: #03b2cb;
+        font-style: italic;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin: 10px 0px -12px 0px;
+        
+    }
+    
+    main p { /*!-----TEXTO SECUNDARIO-----*/
+        color: aliceblue;
+        font-size: 18px;
+        font-style: normal;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 30px;
+        text-align: unset;
+    }
+
+    
+    .info { /*!-----FLEX ETIQUETAS-----*/
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    
+
+
+
+
+/*!------PESTAÑA FOTOGRAFOS-LOCUTORES------*/
+
+
+.fotografos-locutores { /*!-----CAJA-----*/
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    text-align: center;
+}
+
+.fotografos-locutores p { /*!-----FORMATO TEXTO IMAGEN-----*/
+    color: aliceblue;
+    font-size: 16px;
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.fotografos-locutores div a { /*!-----DISEÑO BOTON-----*/
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    color: black;
+    background-color: brown;
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+
+
+/*!-----PESTAÑA PATROCINADORES-----*/
+
+
+.patrocinio p { /*!-----TEXTO-----*/
+    color: #03b2cb;
+    font-size: 10px;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.patrocinio img { /*!-----IMAGEN-----*/
+    width: 200px;
+    height: 150px;
+}
+
+.patrocinio div {
+    width: 250px;
+    height: 300px;
+    border: 2px solid white;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.patrocinio {
+    /* text-align: center; */
+    display: flex; 
+    flex-direction: row;
+}
+
+.patrocinio div a {
+    text-decoration: none;
+    color: white;
+    background-color: blue;
+    padding: 5px;
+    border-radius: 10px;
+    
+}
+
+/* .publicidad {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.redes {
+    padding: 30px;
+} */
+
+
+
+
+/*!-----PESTAÑA GALERIA-----*/
+
+
+.datos { /*!-----CAJA-----*/
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.datos p { /*!-----TEXTO-----*/
+    color: #ffffff;
+    font-size: 20px;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: -30px 0px 0px 0px ;
+}
+
+
+
+
+/*!-----PESTAÑA CARRERAS-----*/
+
+
+.motivacion { /*!-----CAJA-----*/
+    background-color: black;
+    display: flex;
+}
+
+.motivacion p { /*!-----TEXTO-----*/
+    color: #03b2cb;
+    font-size: 20px;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: -20px 0px 80px 0px;
+}
+
+.motivacion iframe { /*!-----VIDEOS-----*/
+    margin: 10px 20px 0px 20px;
+}
+
+/*!-----DATOS PROVINCIAS-----*/
+
+.grid-galeria {
+    width: auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 250px;
+    gap: 10px;
+    padding: 50px;
+}
+
+.grid-galeria div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 2px 2px 43px -3px rgba(10,164,250,0.62);
+    -webkit-box-shadow: 2px 2px 43px -3px rgba(10,164,250,0.62);
+    -moz-box-shadow: 2px 2px 43px -3px rgba(10,164,250,0.62);
+}
+
+.video-informativo { /*!-----FLEX VIDEO-----*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+.grid-items {
+    position: relative;
+}
+
+.grid-items p {
+    position: absolute;
+    bottom: 0;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.img-1 {
+    grid-row: span 2;
+}
+
+.img-2 {
+    grid-column: span 2;
+}
+
+.img-3 {
+    grid-column: span 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*!-----FOOTER-----*/
+
+
+footer { /*!-----CAJA-----*/
+    background-color: rgb(30, 28, 28);
+    display: flex;
+    justify-content: flex-end;  
+}
+
+footer div { /*!-----RED SOCIAL-----*/
+    margin: 10px;
+    
+}
+
+footer h1{ /*!-----TEXTO-----*/
+    color: #03b2cb;
+    font-size: 20px;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 5px ;
+}
+
+
+

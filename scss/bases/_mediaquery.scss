@@ -1,0 +1,79 @@
+
+
+@media screen and (max-width:900px) { /*!-----CUERPO BODY----*/ 
+    .grid-contenedor {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
+    main{
+        min-height: auto;
+    }
+    }
+
+    @media screen and (max-width:900px) { /*!-----PAGINA INDEX----*/ 
+        .info {
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+        }
+
+    @media screen and (max-width:900px) { /*!-----PAGINA GALERIA----*/ 
+        .datos {
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+        }
+
+    // @media screen and (max-width:900px) { /*!-----PAGINA FOTOGRAFOS-LOCUTORES----*/ 
+    //     .fotografos-locutores {
+    //         align-items: center;
+    //         text-align: center;
+    //         flex-direction: column;
+    //         }
+    //     }
+
+        @media screen and (max-width:900px) {/*!-----PAGINA PROVINCIAS----*/
+            .provincias {
+                grid-template-columns: repeat(5, 1fr);
+                grid-auto-rows: 200px;
+            }
+            .grid-items {
+                grid-row: span 1;
+                grid-column: span 1;
+            }
+        }
+
+        @media screen and (max-width:520px) {/*!-----PAGINA FOOTER-----*/
+        footer {
+            display: flex;
+            justify-content: space-between;
+            }
+            
+            div h1 a img {
+                width: 10px;
+                height: 10px;
+            }
+            
+        }
+
+        // @media screen and (max-width:900px) {/*!-----PAGINA NOSOTROS-----*/
+        //     .nosotros {
+        //         display: flex;
+        //         flex-direction: column;
+        //         }
+        //         div {
+        //             width: 300px;
+        //             height: 200px;
+        //         }
+                
+        //         }
+            
+
+
+

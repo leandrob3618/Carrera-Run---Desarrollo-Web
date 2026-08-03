@@ -1,0 +1,19 @@
+
+
+footer {
+    background-color: rgb(30, 28, 28);
+    display: flex;
+    justify-content: space-between;
+    div {
+        margin: 10px;
+
+        h1 {
+            color: $color-principal;
+            font-size: 20px;
+            // font-style: italic;
+            // font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            margin: 5px;
+        }
+    }
+}
